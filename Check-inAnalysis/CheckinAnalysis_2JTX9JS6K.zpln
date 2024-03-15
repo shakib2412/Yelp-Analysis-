@@ -1,0 +1,630 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%pyspark\nfrom pyspark import HiveContext\nfrom pyspark.sql import SparkSession\nhc = HiveContext(sc)\ndf = hc.table('checkin')\ndf.show()",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-13T09:54:01+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "business_id": "string",
+                      "checkin_dates": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "business_id",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "checkin_dates",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "business_id": "string",
+                      "checkin_dates": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+--------------------+\n|         business_id|       checkin_dates|\n+--------------------+--------------------+\n|---kPU91CF4Lq2-Wl...|2020-03-13 21:10:...|\n|--0iUa4sNDFiZFrAd...|2010-09-13 21:43:...|\n|--30_8IhuyMHbSOcN...|2013-06-14 23:29:...|\n|--7PUidqRWpRSpXeb...|2011-02-15 17:12:...|\n|--7jw19RH9JKXgFoh...|2014-04-21 20:42:...|\n|--8IbOsAAxjKRoYsB...|2015-06-06 01:03:...|\n|--9osgUCSDUWUkoTL...|2015-06-13 02:00:...|\n|--ARBQr1WMsTWiwOK...|2014-12-12 00:44:...|\n|--FWWsIwxRwuw9vIM...|2010-09-11 16:28:...|\n|--FcbSxK1AoEtEAxO...|2017-08-18 19:43:...|\n|--LC8cIrALInl2vyo...|2017-01-12 19:10:...|\n|--MbOh2O1pATkXa7x...|2013-04-21 01:52:...|\n|--N9yp3ZWqQIm7DqK...|2012-10-06 20:46:...|\n|--O3ip9NpXTKD4oBS...|2010-04-17 21:07:...|\n|--OS_I7dnABrXvRCC...| 2018-05-11 18:23:36|\n|--S43ruInmIsGrnnk...|2010-08-29 01:17:...|\n|--SJXpAa0E-GCp2sm...|2014-04-06 22:23:...|\n|--Sd93OFWITqDHifM...|2013-01-09 17:42:...|\n|--ZVrH2X2QXBFdCil...|2010-08-12 18:21:...|\n|--ZWv8kGlM2YL58uK...|2010-10-13 18:41:...|\n+--------------------+--------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://node-master:4040/jobs",
+              "$$hashKey": "object:338"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710293949008_1620804653",
+      "id": "paragraph_1710120169433_1141078053",
+      "dateCreated": "2024-03-13T09:39:09+0800",
+      "dateStarted": "2024-03-13T09:54:01+0800",
+      "dateFinished": "2024-03-13T09:54:02+0800",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:183"
+    },
+    {
+      "text": "%pyspark\n\n#1. Count the yearly check-in frequency.\n\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.functions import year, count\n\n# Create a SparkSession\nspark = SparkSession.builder \\\n    .appName(\"Yearly Check-in Frequency\") \\\n    .enableHiveSupport() \\\n    .getOrCreate()\n\n# Load the check-in dataset from the Hive table\ncheckin_df = spark.table('checkin')\n\n# Extract the year from the 'checkin_dates' column\ncheckin_df = checkin_df.withColumn(\"year\", year(\"checkin_dates\"))\n\n# Group by year and count the number of check-ins\nyearly_checkin_frequency = checkin_df.groupBy(\"year\").agg(count(\"*\").alias(\"checkin_count\"))\n\n# Show the results\nz.show(yearly_checkin_frequency.orderBy(\"year\"))\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-13T14:10:44+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "year": "string",
+                      "checkin_count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "year",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "checkin_count",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "year\tcheckin_count\n2009\t2\n2010\t28375\n2011\t21836\n2012\t14548\n2013\t12350\n2014\t10420\n2015\t9952\n2016\t8487\n2017\t7108\n2018\t6351\n2019\t5828\n2020\t3603\n2021\t3002\n2022\t68\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710293949008_261141012",
+      "id": "paragraph_1710169078163_1149097774",
+      "dateCreated": "2024-03-13T09:39:09+0800",
+      "dateStarted": "2024-03-13T14:06:52+0800",
+      "dateFinished": "2024-03-13T14:07:04+0800",
+      "status": "FINISHED",
+      "$$hashKey": "object:184"
+    },
+    {
+      "text": "%pyspark\n\n#2. Analyze the check-in frequency for each hour of the day.\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.functions import hour, count\n\n# Create a SparkSession\nspark = SparkSession.builder \\\n    .appName(\"Hourly Check-in Frequency\") \\\n    .enableHiveSupport() \\\n    .getOrCreate()\n\n# Load the check-in dataset from the Hive table\ncheckin_df = spark.table('checkin')\n\n# Extract the hour from the 'checkin_dates' column\ncheckin_df = checkin_df.withColumn(\"hour_of_day\", hour(\"checkin_dates\"))\n\n# Group by hour of the day and count the number of check-ins\nhourly_checkin_frequency = checkin_df.groupBy(\"hour_of_day\").agg(count(\"*\").alias(\"checkin_count\"))\n\n# Show the results\nz.show(hourly_checkin_frequency.orderBy(\"hour_of_day\"))\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-13T14:10:58+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "hour_of_day": "string",
+                      "checkin_count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "hour_of_day",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "checkin_count",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710310036898_596488256",
+      "id": "paragraph_1710310036898_596488256",
+      "dateCreated": "2024-03-13T14:07:16+0800",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:3906",
+      "dateFinished": "2024-03-13T14:10:39+0800",
+      "dateStarted": "2024-03-13T14:10:30+0800",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "hour_of_day\tcheckin_count\nnull\t122319\n0\t428\n1\t308\n2\t247\n3\t180\n4\t142\n5\t99\n6\t44\n7\t40\n8\t29\n9\t24\n10\t37\n11\t101\n12\t186\n13\t361\n14\t513\n15\t672\n16\t772\n17\t835\n18\t904\n19\t889\n20\t809\n21\t730\n22\t683\n23\t578\n"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%pyspark\n\n#3. Identify the cities where check-ins are most frequent.\n\nfrom pyspark import HiveContext\nfrom pyspark.sql.functions import count, col\n\n# Create a HiveContext\nhc = HiveContext(sc)\n\n# Load the 'checkin' dataset\ncheckin_df = hc.table(\"checkin\")\n\n# Load the 'business' dataset\nbusiness_df = hc.table(\"business\")\n\n# Join the two datasets on the 'business_id' column\njoined_df = checkin_df.join(business_df, checkin_df.business_id == business_df.business_id)\n\n# Group by city and count the number of check-ins\ncity_checkin_frequency = joined_df.groupBy(\"city\").agg(count(\"*\").alias(\"checkin_count\")).orderBy(col(\"checkin_count\").desc())\n\n# Show the top 20 cities with the most frequent check-ins\nz.show(city_checkin_frequency.limit(20))\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-13T14:00:47+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "city": "string",
+                      "checkin_count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "city",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "checkin_count",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "city": "string",
+                      "checkin_count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "city\tcheckin_count\nPhiladelphia\t12892\nTampa\t8005\nTucson\t7880\nIndianapolis\t6915\nNashville\t6178\nNew Orleans\t5867\nReno\t5097\nEdmonton\t4675\nSaint Louis\t4369\nSanta Barbara\t2989\nBoise\t2471\nClearwater\t1900\nMetairie\t1539\nSaint Petersburg\t1448\nSparks\t1345\nWilmington\t1263\nFranklin\t1227\nSt. Louis\t1088\nSt. Petersburg\t1052\nBrandon\t930\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://node-master:4040/jobs",
+              "$$hashKey": "object:2324"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710293949008_1779181093",
+      "id": "paragraph_1710120570176_1643143025",
+      "dateCreated": "2024-03-13T09:39:09+0800",
+      "dateStarted": "2024-03-13T09:54:03+0800",
+      "dateFinished": "2024-03-13T09:54:35+0800",
+      "status": "FINISHED",
+      "$$hashKey": "object:185"
+    },
+    {
+      "text": "%pyspark\n\n#4. Show the top 20 merchants with the most frequent check-ins\n\nfrom pyspark import HiveContext\nfrom pyspark.sql.functions import count, col\n\n# Create a HiveContext\nhc = HiveContext(sc)\n\n# Load the 'checkin' dataset\ncheckin_df = hc.table(\"checkin\")\n\n# Load the 'business' dataset\nbusiness_df = hc.table(\"business\")\n\n# Join the two datasets on the 'business_id' column\njoined_df = checkin_df.join(business_df, checkin_df.business_id == business_df.business_id)\n\n# Group by merchant name and count the number of check-ins\nmerchant_checkin_frequency = joined_df.groupBy(\"name\").agg(count(\"*\").alias(\"checkin_count\")).orderBy(col(\"checkin_count\").desc())\n\n# Set limit to 20 for displaying top merchants\ntop_merchants = merchant_checkin_frequency.limit(20)\n\n# Show the top 20 merchants with the most frequent check-ins\nz.show(top_merchants)\n\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-13T14:05:06+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "name": "string",
+                      "checkin_count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "name",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "checkin_count",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "name\tcheckin_count\nStarbucks\t724\nMcDonald's\t701\nDunkin'\t505\nSubway\t453\nTaco Bell\t360\nCVS Pharmacy\t344\nWalgreens\t341\nBurger King\t334\nWendy's\t331\nWawa\t307\nDomino's Pizza\t286\nThe UPS Store\t276\nPizza Hut\t256\nEnterprise Rent-A-Car\t223\nPapa John's Pizza\t192\nGreat Clips\t179\nJimmy John's\t174\nUS Post Office\t174\nKFC\t170\nChick-fil-A\t162\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710293949008_1285236410",
+      "id": "paragraph_1710216632550_1028398735",
+      "dateCreated": "2024-03-13T09:39:09+0800",
+      "dateStarted": "2024-03-13T14:03:05+0800",
+      "dateFinished": "2024-03-13T14:03:39+0800",
+      "status": "FINISHED",
+      "$$hashKey": "object:186"
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-13T09:55:02+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710293949008_1706490557",
+      "id": "paragraph_1710234992223_1883205170",
+      "dateCreated": "2024-03-13T09:39:09+0800",
+      "dateStarted": "2024-03-13T09:55:02+0800",
+      "dateFinished": "2024-03-13T09:55:02+0800",
+      "status": "FINISHED",
+      "$$hashKey": "object:187"
+    }
+  ],
+  "name": "CheckinAnalysis",
+  "id": "2JTX9JS6K",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.10.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/CheckinAnalysis"
+}
